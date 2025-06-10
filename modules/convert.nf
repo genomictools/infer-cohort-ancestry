@@ -1,5 +1,5 @@
 process CONVERT {
-    tag "${cohort}:${type}:${chrom}"
+    tag "${cohort}:${type}:${chrom}:${chunk}"
 
     label 'simple'
     label 'plink'

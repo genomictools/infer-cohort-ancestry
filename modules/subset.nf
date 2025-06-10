@@ -1,5 +1,5 @@
 process SUBSET {
-    tag "${cohort}:${type}"
+    tag "${cohort}:${type}:${chrom}:${chunk}"
 
     label 'simple'
     label 'bcftools'

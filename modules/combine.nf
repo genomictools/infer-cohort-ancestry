@@ -1,7 +1,7 @@
 process COMBINE {
     tag "${cohort}:${type}"
 
-    label 'heavy'
+    label 'simple'
     label 'plink'
 
     publishDir("${params.output_dir}/combined", mode: 'copy')
@@ -9,7 +9,7 @@ process COMBINE {
     input:
     tuple val(cohort), val(type), val(chrom), val(chunk),
           path(bim), path(bed), path(fam), path(nosex),
-          path(log), path(pop)
+          path(log)
 
     output:
     tuple val(cohort), val(type),
@@ -17,16 +17,11 @@ process COMBINE {
           path("${cohort}.${type}.bed"),
           path("${cohort}.${type}.fam"),
           path("${cohort}.${type}.nosex"),
-          path("${cohort}.${type}.log"),
-          path("${cohort}.${type}.pop")
+          path("${cohort}.${type}.log")
 
     script:
     """
     #!/bin/bash
-    # Return population file 
-    cp ${pop} ${cohort}.${type}.pop
-    cat ${pop} | awk '{ print "0", \$2, \$1, \$2}' > famids.txt
-
     # Create a list of all files
     echo "${bed.join('\n')}" > bed.txt
     echo "${bim.join('\n')}" > bim.txt

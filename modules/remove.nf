@@ -1,5 +1,5 @@
 process REMOVE {
-    tag "${cohort}:${type}:${chrom}"
+    tag "${cohort}:${type}:${chrom}:${chunk}"
 
     label 'simple'
     label 'bcftools'
