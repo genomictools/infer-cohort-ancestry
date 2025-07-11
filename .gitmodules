@@ -1,4 +1,15 @@
+[submodule "conf"]
+	path = conf
+	url = git@github.com:genomictools/conf.git
 [submodule "bin"]
 	path = bin
-	url = git@github.com:houlstonlab/gentools-scripts.git
+	url = git@github.com:genomictools/bin.git
+	branch = infer-cohort-ancestry
+[submodule "modules"]
+	path = modules
+	url = git@github.com:genomictools/modules.git
+	branch = infer-cohort-ancestry
+[submodule "subworkflows"]
+	path = subworkflows
+	url = git@github.com:genomictools/subworkflows.git
 	branch = infer-cohort-ancestry
