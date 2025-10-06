@@ -1,8 +1,7 @@
 
 {
-    "cohorts"    : "input/cohort.info.csv",
-    "fasta"      : "$REFS/iGenomes/Homo_sapiens/GATK/GRCh38/Sequence/WholeGenomeFasta/Homo_sapiens_assembly38.fasta",
-    "dbsnp"      : "$REFS/iGenomes/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/dbsnp_146.hg38.vcf.gz{,.tbi}",
+    "fasta"      : "/data/reference-data/iGenomes/Homo_sapiens/GATK/GRCh38/Sequence/WholeGenomeFasta/Homo_sapiens_assembly38.fasta",
+    "dbsnp"      : "/data/reference-data/iGenomes/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/dbsnp_146.hg38.vcf.gz{,.tbi}",
     "ld_regions" : "input/high_ld_regions.txt",
     "snplist"    : "input/snplist.txt"
 }

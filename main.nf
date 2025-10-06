@@ -19,7 +19,6 @@ cohorts_ch = Channel.fromPath(params.cohorts)
 population_ch = Channel.fromPath(params.cohorts)
     | splitCsv(header: true, sep: ',')
     | map { row -> [ row.cohort, file(row.population) ] }
-
 dbsnp       = Channel.fromFilePairs(params.dbsnp, flat: true) | map { ['dbsnp', it[1], it[2]] }
 fasta       = Channel.fromFilePairs(params.fasta, flat: true)
 ld_regions  = Channel.fromPath(params.ld_regions)
