@@ -1,7 +1,21 @@
-
 {
-    "fasta"      : "/data/reference-data/iGenomes/Homo_sapiens/GATK/GRCh38/Sequence/WholeGenomeFasta/Homo_sapiens_assembly38.fasta",
-    "dbsnp"      : "/data/reference-data/iGenomes/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/dbsnp_146.hg38.vcf.gz{,.tbi}",
-    "ld_regions" : "input/high_ld_regions.txt",
-    "snplist"    : "input/snplist.txt"
+    "cohorts"       : "input/cohorts_info.csv",
+    "fasta"         : "/data/reference-data/iGenomes/Homo_sapiens/GATK/GRCh38/Sequence/WholeGenomeFasta/Homo_sapiens_assembly38.fasta{,.fai}",
+    "dbsnp"         : "/data/reference-data/iGenomes/Homo_sapiens/GATK/GRCh38/Annotation/GATKBundle/dbsnp_146.hg38.vcf.gz{,.tbi}",
+    "ld_regions"    : "input/high_ld_regions.bed",
+    "modes"         : "noclusters,clusters,mds",
+    "MAF"           : 0.1,
+    "HWE"           : 1e-50,
+    "F_MISSING"     : 0.1,
+    "ExcHet"        : 0.05,
+    "GQ"            : 20,
+    "DP"            : 5,
+    "VAF"           : 0.2,
+    "N_VARS"        : 50000,
+    "N_DIMS"        : 5,
+    "window"        : 50,
+    "step"          : 5,
+    "rsquared"      : 0.2,
+    "relatedness"   : 0.25,
+    "update"        : false
 }
