@@ -22,8 +22,7 @@ modes_ch    = Channel.of(params.modes.split(','))
 
 chroms_ch =  Channel.of( [ cohort: 'dbsnp', chrom: '', start: '', end: '', genelist: file(params.genelist) ] )
     | map { it ->
-        // chrom = it.chrom ?: (1..22).collect { "chr$it" } + ['chrX', 'chrY']
-        chrom = it.chrom ?: (21..22).collect { "chr$it" }
+        chrom = it.chrom ?: (1..22).collect { "chr$it" } + ['chrX', 'chrY']
         key   = (it.start && it.end) ? "${chrom}:${it.start}-${it.end}" : chrom
         [ it.cohort, key, chrom, it.start ?: null, it.end ?: null, it.genelist ? file(it.genelist) : null ]
     }
