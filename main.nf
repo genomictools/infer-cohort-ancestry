@@ -42,7 +42,7 @@ workflow {
         snplist  = Channel.fromPath(params.snplist)
     }
     snplist
-        | splitText( by: params.chunk_size, file: 'chunk' )
+        | splitText( by: params.chunk_size, limit: params.limit, file: 'chunk' )
         | map { [ it.fileName, it ] }
         | set { chunks }
 

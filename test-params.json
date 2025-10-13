@@ -17,5 +17,7 @@
     "step"          : 5,
     "rsquared"      : 0.2,
     "relatedness"   : 0.25,
-    "update"        : false
+    "update"        : false,
+    "chunk_size"    : 5000,
+    "limit"         : 25000
 }
