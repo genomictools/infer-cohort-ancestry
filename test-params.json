@@ -2,7 +2,7 @@
     "cohorts"       : "input/cohorts_info.csv",
     "fasta"         : "input/hs.hg38.chr22.fasta{,.fai}",
     "dbsnp"         : "input/dbsnp.vcf.gz{,.tbi}",
-    "ld_regions"    : "input/high_ld_regions.bed",
+    "exclude_regions": "input/high_ld_regions.bed",
     "modes"         : "noclusters,clusters,mds",
     "MAF"           : 0.1,
     "HWE"           : 1e-50,

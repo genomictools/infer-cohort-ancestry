@@ -17,7 +17,6 @@ population_ch = Channel.fromPath(params.cohorts)
     | splitCsv(header: true, sep: ',')
     | map { row -> [ row.cohort, file(row.population) ] }
 fasta       = Channel.fromFilePairs(params.fasta, flat: true)
-ld_regions  = Channel.fromPath(params.ld_regions)
 modes_ch    = Channel.of(params.modes.split(','))
 
 chroms_ch =  Channel.of( [ cohort: 'dbsnp', chrom: '', start: '', end: '', genelist: file(params.genelist) ] )
