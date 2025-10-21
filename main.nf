@@ -46,6 +46,11 @@ workflow {
         | set { chunks }
 
     cohorts  = prepare_variants( cohorts_ch, chunks, population_ch )
-    all_population = population_ch | map { it.last() }| collectFile(name: 'all.population.txt')
+
+    // Collect Populations
+    all_population = population_ch
+        | map { it.last() }
+        | collectFile(name: 'all.population.txt')
+
     ancestry = infer_ancestry(cohorts.cases, cohorts.references, all_population )
 }
