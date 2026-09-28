@@ -13,3 +13,7 @@
 	path = subworkflows
 	url = git@github.com:genomictools/subworkflows.git
 	branch = infer-cohort-ancestry
+[submodule "test-datasets"]
+	path = test-datasets
+	url = git@github.com:genomictools/test-datasets.git
+	branch = infer-cohort-ancestry
