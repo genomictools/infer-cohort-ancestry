@@ -13,4 +13,5 @@ module load Nextflow
 nextflow run main.nf \
     --output_dir test-datasets/results/ \
     -profile local,test \
+    -params-file test-params.json \
     -resume
