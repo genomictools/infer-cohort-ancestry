@@ -1,0 +1,3 @@
+cohort,type,size,vars_file,vars_index,population
+test,cases,100,test-datasets/test.vcf.gz,test-datasets/test.vcf.gz.tbi,test-datasets/test.population.txt
+1kg,references,1779,test-datasets/1kg.vcf.gz,test-datasets/1kg.vcf.gz.tbi,test-datasets/1kg.population.txt
